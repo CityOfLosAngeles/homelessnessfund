@@ -220,7 +220,7 @@ plotData = function(error, data, dataType) {
   
         // toggle
        // if (d3.select(this).attr('id')=='values') {
-        //  drawValues();
+          drawValues();
         //}
       //});
 
