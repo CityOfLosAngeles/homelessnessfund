@@ -95,7 +95,7 @@ plotData = function(error, data, dataType) {
       .attr("class", "bar rBar")
       .attr("x", function(d) { return x(d.year); })
       .attr("y", graphHeight)
-      .attr("width", x.bandwidth())
+      .attr("width", x.bandwidth()/2)
       .attr("height", 0)
       .attr('fill', 'steelblue')
       .on('mouseenter', showFloatingTooltip)
@@ -141,7 +141,7 @@ plotData = function(error, data, dataType) {
 
   function drawValues() {
     // change y axis (immmediate, no transition)
-    var y = d3.scaleLinear().rangeRound([graphHeight, 0]).domain([0, 400]);
+    var y = d3.scaleLinear().rangeRound([graphHeight, 0]).domain([0, 500]);
     d3.selectAll('.axis--y')
         .call(d3.axisLeft(y).ticks(6));
 
