@@ -203,8 +203,7 @@ plotData = function(error, data, dataType) {
       .attr('stroke', 'black')
       .attr('stroke-width', 2);
 
-    var content = '<span class="heading"><p style="text-align: center">Fiscal Year ' + d.year + '</p></span>' +
-                  '<table><tr><td style="font-style: italic"></td><td style="text-align: center">Value</td><td style="text-align: center">Percent</td></</tr>' + 
+    var content = '<span class="heading"><p style="text-align: center">Fiscal Year ' + d.year + '</p></span>' + 
                   '<tr><td style="padding: 0px 10px 0px 20px">Reserve Fund</td><td style="text-align: center">' + formatAmount(d.reserve_fund) + '</td><td style="text-align: center">' + '</td></tr>' + 
                   '<tr><td>General fund receipts</td><td style="text-align: center">' + formatAmount(d.general_fund) + '</td><td style="text-align: center">100%</td></table>';
     // display tooltip
@@ -231,7 +230,7 @@ plotData = function(error, data, dataType) {
 
 d3.csv("homelessnessfund.csv", function(d) {
   d.year = +d.fiscal_year;
-  d.reserve_fund = +d.reserve_fund * 1e6;
+  d.reserve_fund = +d.special_fund * 1e6;
   d.general_fund = +d.general_fund * 1e6;
   d.total = +d.total *1e6;
   return d;
