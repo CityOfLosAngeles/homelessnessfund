@@ -163,13 +163,13 @@ plotData = function(error, data, dataType) {
       .attr("height", function(d) { return graphHeight - y(d.reserve_fund / 1e6); });
 
     // draw line
-    var pLine = d3.line()
-      .x(function(d) { return x(d.year) + (0.5 * x.bandwidth()); })
-      .y(function(d) { return y(0.05 * d.general_fund / 1e6); });
-    d3.selectAll('.pLine')
-      .transition()
-      .duration(500)
-      .attr('d', pLine);
+    //var pLine = d3.line()
+      //.x(function(d) { return x(d.year) + (0.5 * x.bandwidth()); })
+      //.y(function(d) { return y(0.05 * d.general_fund / 1e6); });
+    //d3.selectAll('.pLine')
+      //.transition()
+      //.duration(500)
+      //.attr('d', pLine);
 
     // place the label
     d3.selectAll('.policyText')
@@ -204,26 +204,25 @@ plotData = function(error, data, dataType) {
       .attr('stroke-width', 2);
 
     var content = '<span class="heading"><p style="text-align: center">Fiscal Year ' + d.year + '</p></span>' + 
-                  '<tr><td style="padding: 0px 10px 0px 20px">Reserve Fund</td><td style="text-align: center">' + formatAmount(d.reserve_fund) + '</td><td style="text-align: center">' + '</td></tr>' + 
-                  '<tr><td>General fund receipts</td><td style="text-align: center">' + formatAmount(d.general_fund) + '</td><td style="text-align: center">100%</td></table>';
+                  '<tr><td style="padding: 0px 10px 0px 20px">Reserve Fund</td><td style="text-align: center">' + formatAmount(d.reserve_fund) + '</td><td style="text-align: center">' + '</td></tr>';
     // display tooltip
     floating_tooltip.revealTooltip(content, d3.event);
   }
 
   // Sets up the buttons to allow for toggling between modes
-  d3.selectAll('.btn-group')
-    .selectAll('.btn')
-    .on('click', function() {
+  //d3.selectAll('.btn-group')
+    //.selectAll('.btn')
+    //.on('click', function() {
         // set all buttons on the clicked toolbar as inactive, then activate the clicked button
-        var p = d3.select(this.parentNode);
-        p.selectAll('.btn').classed('active', false);
-        d3.select(this).classed('active', true);
+      //  var p = d3.select(this.parentNode);
+        //p.selectAll('.btn').classed('active', false);
+        //d3.select(this).classed('active', true);
   
         // toggle
-        if (d3.select(this).attr('id')=='values') {
-          drawValues();
-        }
-      });
+       // if (d3.select(this).attr('id')=='values') {
+        //  drawValues();
+        //}
+      //});
 
 
 }
@@ -231,8 +230,8 @@ plotData = function(error, data, dataType) {
 d3.csv("homelessnessfund.csv", function(d) {
   d.year = +d.fiscal_year;
   d.reserve_fund = +d.special_fund * 1e6;
-  d.general_fund = +d.general_fund * 1e6;
-  d.total = +d.total *1e6;
+  //d.general_fund = +d.general_fund * 1e6;
+  //d.total = +d.total *1e6;
   return d;
 }, plotData);
 
