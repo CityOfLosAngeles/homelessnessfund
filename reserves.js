@@ -44,7 +44,7 @@ plotData = function(error, data, dataType) {
     .attr("transform", "translate(" + graphMargin.left + "," + graphMargin.top + ")");
 
   x.domain(data.map(function(d) { return d.year; }));
-  y.domain([0, 400]);
+  y.domain([0, 500]);
 
   // first year of data
   var beginning_year = d3.min(data.map(function(d){return d.year}));
@@ -180,7 +180,7 @@ plotData = function(error, data, dataType) {
 
 
   /* tooltip for displaying data on each item */
-  var floating_tooltip = floatingTooltip('floatingTooltip', "375px");
+  var floating_tooltip = floatingTooltip('floatingTooltip', "200px");
 
   function showFloatingTooltip(d) {
     // get the active view
