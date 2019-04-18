@@ -202,9 +202,10 @@ plotData = function(error, data, dataType) {
       .attr('fill', 'none')
       .attr('stroke', 'black')
       .attr('stroke-width', 2);
-
-    var content = '<span class="heading"><p style="text-align: center">Fiscal Year ' + d.year + '</p></span>' + 
-                  '<table><tr><td style="padding: 0px 10px 0px 20px">Reserve Fund</td></tr><td style="text-align: center">' + formatAmount(d.reserve_fund) + '</td><td style="text-align: center">' + '</td></tr></table>';
+      
+      var content = '<p> test </p>'
+    //var content = '<span class="heading"><p style="text-align: center">Fiscal Year ' + d.year + '</p></span>' + 
+    //              '<table><tr><td style="padding: 0px 10px 0px 20px">Reserve Fund</td></tr><td style="text-align: center">' + formatAmount(d.reserve_fund) + '</td><td style="text-align: center">' + '</td></tr></table>';
     // display tooltip
     floating_tooltip.revealTooltip(content, d3.event);
   }
