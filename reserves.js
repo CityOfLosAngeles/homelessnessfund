@@ -44,7 +44,7 @@ plotData = function(error, data, dataType) {
     .attr("transform", "translate(" + graphMargin.left + "," + graphMargin.top + ")");
 
   x.domain(data.map(function(d) { return d.year; }));
-  y.domain([0, 500]);
+  y.domain([0, 400]);
 
   // first year of data
   var beginning_year = d3.min(data.map(function(d){return d.year}));
