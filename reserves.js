@@ -229,7 +229,7 @@ plotData = function(error, data, dataType) {
 
 d3.csv("homelessnessfund.csv", function(d) {
   d.year = +d.fiscal_year;
-  d.reserve_fund = +d.Special_Fund * 1e6;
+  d.reserve_fund = +d.Total * 1e6;
   //d.general_fund = +d.general_fund * 1e6;
   //d.total = +d.total *1e6;
   return d;
