@@ -184,13 +184,13 @@ plotData = function(error, data, dataType) {
 
   function showFloatingTooltip(d) {
     // get the active view
-    view = d3.select('#view_toolbar').selectAll('.btn').filter('.active').attr('id');
+    //view = d3.select('#view_toolbar').selectAll('.btn').filter('.active').attr('id');
 
     // set the height
-     if (view=='values') {
+     //if (view=='values') {
       var y = d3.scaleLinear().rangeRound([graphHeight, 0]).domain([0, 400]);
       var h = y(d.reserve_fund / 1e6);
-    }
+    //}
 
     // outline the bar for that year
     graph.append('rect')
