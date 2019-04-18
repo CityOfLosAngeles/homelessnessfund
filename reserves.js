@@ -44,7 +44,7 @@ plotData = function(error, data, dataType) {
     .attr("transform", "translate(" + graphMargin.left + "," + graphMargin.top + ")");
 
   x.domain(data.map(function(d) { return d.year; }));
-  y.domain([0, 0.08]);
+  y.domain([0, 500]);
 
   // first year of data
   var beginning_year = d3.min(data.map(function(d){return d.year}));
@@ -61,7 +61,7 @@ plotData = function(error, data, dataType) {
   graph.append("g")
       .style('font-size', axisTextSize)
       .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y).ticks(6, "%"))
+      .call(d3.axisLeft(y).ticks(6))
       .append("text")
       .classed('yAxisText', true)
       .attr('x', 10)
