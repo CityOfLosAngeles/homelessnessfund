@@ -188,7 +188,7 @@ plotData = function(error, data, dataType) {
 
     // set the height
      //if (view=='values') {
-      var y = d3.scaleLinear().rangeRound([graphHeight, 0]).domain([0, 400]);
+      var y = d3.scaleLinear().rangeRound([graphHeight, 0]).domain([0, 500]);
       var h = y(d.reserve_fund / 1e6);
     //}
 
@@ -197,7 +197,7 @@ plotData = function(error, data, dataType) {
       .attr('class', 'outline')
       .attr('x', x(d.year))
       .attr('y', h)
-      .attr('width', x.bandwidth())
+      .attr('width', x.bandwidth()/2)
       .attr('height', graphHeight - h)
       .attr('fill', 'none')
       .attr('stroke', 'black')
