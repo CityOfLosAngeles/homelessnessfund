@@ -157,8 +157,8 @@ plotData = function(error, data, dataType) {
 
     // transition reserve fund bars
     graph.selectAll(".rBar")
-      .transition()
-      .duration(500)
+      //.transition()
+      //.duration(500)
       .attr("y", function(d) { return y(d.reserve_fund / 1e6); })
       .attr("height", function(d) { return graphHeight - y(d.reserve_fund / 1e6); });
 
@@ -172,10 +172,10 @@ plotData = function(error, data, dataType) {
       //.attr('d', pLine);
 
     // place the label
-    d3.selectAll('.policyText')
-      .transition()
-      .duration(500)
-      .attr('y', y(270))
+    //d3.selectAll('.policyText')
+      //.transition()
+      //.duration(500)
+      //.attr('y', y(270))
   }
 
 
