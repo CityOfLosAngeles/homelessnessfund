@@ -138,26 +138,6 @@ plotData = function(error, data, dataType) {
   //   .attr('font-size', axisTextSize)
   //   .text('Reserve Fund');
 
-  /* draw reserve fund policy line */
-  var pLine = d3.line()
-      .x(function(d) { return x(d.year) + (0.5 * x.bandwidth()); })
-      .y(function(d) { return y(0.05); });
-
-  graph.append('path')
-    .data([data])
-    .attr('class', 'line pLine')
-    .attr('d', pLine)
-    .attr('stroke-dasharray', '5, 5')
-    .attr('stroke', 'black')
-    .attr('fill', 'none');
-
-  graph.append('text')
-    .attr('class', 'policyText')
-    .attr('x', x(beginning_year + 1))
-    .attr('y', y(0.055))
-    .attr('font-size', axisTextSize)
-    .text('5% Reserve Fund policy');
-
 
   function drawValues() {
     // change y axis (immmediate, no transition)
@@ -172,8 +152,8 @@ plotData = function(error, data, dataType) {
     // graph.selectAll('.tBar')
     //   .transition()
     //   .duration(500)
-    //   .attr('y', function(d) {return y(d.begin_total / 1e6)})
-    //   .attr('height', function(d) {return graphHeight - y(d.begin_total / 1e6); });
+    //   .attr('y', function(d) {return y(d.total / 1e6)})
+    //   .attr('height', function(d) {return graphHeight - y(d.total / 1e6); });
 
     // transition reserve fund bars
     graph.selectAll(".rBar")
@@ -198,8 +178,6 @@ plotData = function(error, data, dataType) {
       .attr('y', y(270))
   }
 
-  // default to drawing percentages
-  drawPercent();
 
   /* tooltip for displaying data on each item */
   var floating_tooltip = floatingTooltip('floatingTooltip', "375px");
