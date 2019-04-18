@@ -96,7 +96,7 @@ plotData = function(error, data, dataType) {
       .attr("x", function(d) { return x(d.year); })
       .attr("y", graphHeight)
       .attr("width", x.bandwidth())
-      .attr("height", 10)
+      .attr("height", 0)
       .attr('fill', 'steelblue')
       .on('mouseenter', showFloatingTooltip)
       .on('mouseleave', function() {
