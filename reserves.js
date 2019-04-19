@@ -79,7 +79,7 @@ plotData = function(error, data, dataType) {
   //   .attr('class', 'bar tBar')
   //   .attr('x', function(d) {return x(d.year)})
   //   .attr('y', graphHeight)
-  //   .attr('width', x.bandwidth())
+  //   .attr('width', x.bandwidth()/2)
   //   .attr('height', 0)
   //   .attr('fill', 'skyblue')
   //   .on('mouseenter', showFloatingTooltip)
@@ -108,7 +108,7 @@ plotData = function(error, data, dataType) {
   // legend = graph.append('g');
   // legendX = width * 0.6;
   // legendY = graphHeight * 0.25
-  // legendSize = 0.8 * x.bandwidth();
+  // legendSize = 0.8 * x.bandwidth()/2;
 
   // // voter-approved debt
   // legend.append('rect')
