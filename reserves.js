@@ -143,7 +143,7 @@ plotData = function(error, data, dataType) {
     // change y axis (immmediate, no transition)
     var y = d3.scaleLinear().rangeRound([graphHeight, 0]).domain([0, 500]);
     d3.selectAll('.axis--y')
-        .call(d3.axisLeft(y).ticks(6));
+        .call(d3.axisLeft(y).ticks(12));
 
     d3.selectAll('.yAxisText')
         .text('$ (Millions)');
