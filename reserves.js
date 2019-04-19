@@ -61,7 +61,7 @@ plotData = function(error, data, dataType) {
   graph.append("g")
       .style('font-size', axisTextSize)
       .attr("class", "axis axis--y")
-      .call(d3.axisLeft(y).ticks(6))
+      .call(d3.axisLeft(y).ticks(12))
       .append("text")
       .classed('yAxisText', true)
       .attr('x', 10)
