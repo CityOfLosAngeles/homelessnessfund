@@ -95,7 +95,7 @@ plotData = function(error, data, dataType) {
       .attr("class", "bar rBar")
       .attr("x", function(d) { return x(d.year); })
       .attr("y", graphHeight)
-      .attr("width", x.bandwidth())
+      .attr("width", x.bandwidth()/2)
       .attr("height", 0)
       .attr('fill', 'steelblue')
       .on('mouseenter', showFloatingTooltip)
