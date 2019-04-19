@@ -197,7 +197,7 @@ plotData = function(error, data, dataType) {
       .attr('class', 'outline')
       .attr('x', x(d.year))
       .attr('y', h)
-      .attr('width', x.bandwidth())
+      .attr('width', x.bandwidth()/2)
       .attr('height', graphHeight - h)
       .attr('fill', 'none')
       .attr('stroke', 'black')
