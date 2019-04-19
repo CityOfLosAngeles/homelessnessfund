@@ -204,7 +204,7 @@ plotData = function(error, data, dataType) {
       .attr('stroke-width', 2);
 
     var content = '<span class="heading"><p style="text-align: center">Fiscal Year ' + d.year + '</p></span>' + 
-                  '<table><tr><td style="padding: 0px 10px 0px 20px">Total Allocated Dollars</td></tr><td style="text-align: center">' + formatAmount(d.reserve_fund) + '</td></tr></table>';
+                  '<table><tr><td style="padding: 0px 10px 0px 20px">Total Allocated Dollars for Homelessness</td></tr><td style="text-align: center">' + formatAmount(d.reserve_fund) + '</td></tr></table>';
     // display tooltip
     floating_tooltip.revealTooltip(content, d3.event);
   }
