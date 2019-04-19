@@ -15,7 +15,7 @@ plotData = function(error, data, dataType) {
       y = w.innerHeight|| e.clientHeight|| g.clientHeight;
 
   // maintain a ratio of 2.5 width to 1 height, but scale to window. Max width of 1000.
-  var width = d3.min([800, y * 1.2, x * 0.75]);
+  var width = d3.min([1000, y * 1.2, x * 0.75]);
   var height = width / 2.5;
 
   // scale the toolbars
